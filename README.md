@@ -1,6 +1,6 @@
 # YouTube Music Controller
 
-A Chrome extension with Django backend for controlling YouTube Music playback.
+A Chrome extension for controlling YouTube Music playback.
 
 ## Features
 
@@ -8,67 +8,43 @@ A Chrome extension with Django backend for controlling YouTube Music playback.
 - Next/Previous track controls
 - Current song display
 - Clean and simple interface
-- Django backend for extended functionality
 
 ## Project Structure
 
 ```
-youtube_music_controller/
-├── chrome_extension/          # Chrome extension files
-│   ├── manifest.json
-│   ├── popup.html
-│   ├── popup.js
-│   └── icons/
-├── django_backend/           # Django project files
-│   ├── manage.py
-│   ├── youtube_music_controller/
-│   └── api/
+youtube-music-controller/
+├── manifest.json          # Extension configuration
+├── popup.html            # Extension interface
+├── popup.js              # Extension functionality
+├── icons/                # Extension icons
+│   ├── icon16.png
+│   ├── icon48.png
+│   └── icon128.png
 └── README.md
 ```
 
 ## Installation
 
-### Chrome Extension
 1. Open Chrome and go to `chrome://extensions/`
 2. Enable "Developer mode" in the top right corner
-3. Click "Load unpacked" and select the `chrome_extension` directory
-
-### Django Backend
-1. Create a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Run migrations:
-   ```bash
-   python manage.py migrate
-   ```
-4. Start the server:
-   ```bash
-   python manage.py runserver
-   ```
+3. Click "Load unpacked" and select the extension directory
+4. The extension icon should appear in your Chrome toolbar
 
 ## Usage
 
-1. Start the Django backend server
-2. Install the Chrome extension
-3. Navigate to [YouTube Music](https://music.youtube.com)
-4. Use the extension controls to manage playback
+1. Navigate to [YouTube Music](https://music.youtube.com)
+2. Click the extension icon in your Chrome toolbar
+3. Use the controls to:
+   - Play/Pause the current track
+   - Skip to the next track
+   - Go to the previous track
+4. The current song title will be displayed in the popup
 
 ## Development
 
-### Chrome Extension
-- Modify files in the `chrome_extension` directory
+- Modify files in the extension directory
 - Reload the extension in Chrome to see changes
-
-### Django Backend
-- Add new API endpoints in `api/views.py`
-- Update models in `api/models.py`
-- Run migrations when models change
+- Test on YouTube Music website
 
 ## Contributing
 
